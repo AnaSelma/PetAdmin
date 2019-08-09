@@ -8,7 +8,7 @@ main.content
         th Email
         th.-action-wide Modified
         th.-action data-sorter="false"
-
+ 
     tbody
       - if @items.present?
         - @items.each do |item|
@@ -19,3 +19,4 @@ main.content
             td = fae_delete_button item
       - else
         tr: td colspan="3" No items found
+        

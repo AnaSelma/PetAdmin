@@ -3,8 +3,8 @@ class Discount < ApplicationRecord
 
   validates :title, uniqueness: true, presence: true
   validates :value, uniqueness: true, presence: true
+  
 
-  include Fae::BaseModelConcern
   def fae_display_field
     title
   end

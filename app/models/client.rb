@@ -3,7 +3,7 @@ class Client < ApplicationRecord
 
   has_many :campaign_clients, dependent: :destroy
   has_many :campaigns, through: :campaign_clients
-
+ 
   validates :phone, presence: true
   validates :email,
     uniqueness: true,
@@ -12,8 +12,11 @@ class Client < ApplicationRecord
       with: Fae.validation_helpers.email_regex,
       message: 'You need use a valid and unique email'
     }
+ 
+ 
   def fae_display_field
     name
   end
 
+ 
 end
