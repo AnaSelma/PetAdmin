@@ -6,4 +6,13 @@
     = fae_input f, :email
     = fae_input f, :observations
     = fae_input f, :phone
+    h2 Address
 
+    = f.fields_for :address do |address_form|
+      = fae_input address_form, :address
+      = fae_input address_form, :number
+      = fae_input address_form, :neighborhood
+      = fae_input address_form, :city
+      = fae_input address_form, :state
+      = fae_input address_form, :zipcode
+      
